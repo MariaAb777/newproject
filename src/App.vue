@@ -8,21 +8,31 @@
 
              <div class="note-header">
               <h1 class="notes_title">{{ title }}</h1>
-              <div class="">
+              <div>
             <!-- {{ message }} -->
 
             <message v-if="message" :message="message"> </message>
 
             <!-- {{ new note }} -->
             <newNote :note="note" @addNote="addNote"> </newNote>
-           
-           
+
+
+            <!-- title -->
+            
+             <div class="note-header">
+              <h1 class="notes_title">{{ title1 }}</h1>
+
+              <div class="icons">
+                    <button class="button_icon" :class="{active: grid}" @click="grid = true">Column</button>
+                    <button class="button_icon"  :class="{active: !grid}" @click="grid = false">Grid</button>
+              </div>
+              </div>
 
               </div>
             </div>
 
             <!-- {{ note list }} -->
-            <notes :notes="notes" @remove="removeNote"> </notes>
+            <notes :notes="notes" :grid='grid' @remove="removeNote"> </notes>
           </div>
         </section>
       </div>
@@ -45,7 +55,10 @@ export default {
   data() {
     return {
       title: "Notes App",
+      title1: 'Notes',
       message: null,
+      grid: true,
+
       note: {
         title: "",
         descr: "",
@@ -124,4 +137,16 @@ export default {
 .notes {
   margin-top: 50px;
 }
+.button_icon{
+           width: 100px;
+    height: 25px;
+    background-color:#D8D8D8;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    &.active{
+      background-color:#6b6b6b;
+    
+    }
+    }
 </style>

@@ -1,10 +1,7 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/Notte">Note</router-link> |
-      <router-link to="/Modal">Modal</router-link>
-    </div>
-    <router-view/>
+  <div >
+
+    
   </div>
 </template>
 
@@ -12,9 +9,8 @@
 <script>
 
 
-
 export default {
-  name: 'App',
+  name: 'Notte',
   data(){
     return{
 

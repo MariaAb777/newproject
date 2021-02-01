@@ -1,5 +1,5 @@
 <template>
-  <!-- <transition name="modal"> -->
+
     <div class="modal__wrapper" @click="$emit('close')">
       <div class="modal-content" @click.stop="">
         <div class="modal-header">
@@ -7,11 +7,11 @@
           <span class="button-close" @click="$emit('close')">×</span>
         </div>
         <div class="modal-body">
-          <slot name="body"></slot>
+          <slot name="body">default body </slot>
         </div>
       </div>
     </div>
-  <!-- </transition> -->
+ 
 </template>
 
 <script>

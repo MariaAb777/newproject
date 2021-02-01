@@ -9,15 +9,23 @@
       <div class="wrapper_content">
         <section>
           <div class="container">
-            <button @click="modalFirst = !modalFirst" class="btn">Show first modal</button>
-            <modal title="first modal"
-                    v-if="modalFirst"
-                    @close='modalFirst = !modalFirst'
-                    
-                    
-                    >
-                   
-             </modal>
+            <button @click="modalFirst = !modalFirst" class="btn">
+              Show first modal
+            </button>
+            <modal
+              title="first modal"
+              v-if="modalFirst"
+              @close="modalFirst = !modalFirst"
+            >
+              <div slot="body">
+                <p>This is text</p>
+                <button @click="modalFirst = !modalFirst" class="btn">
+              Well done
+            </button>
+              </div>
+
+              
+            </modal>
           </div>
         </section>
       </div>

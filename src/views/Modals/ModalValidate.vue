@@ -23,7 +23,14 @@
                         <input   v-model="email"
                                  :class=" {error: $v.email.$error }">
                     </div>
-                    <button class="btn">
+<!--                        <div >-->
+<!--                            <label>Password: </label>-->
+<!--                            <p class="errorText1" v-if="!$v.password.required">File the name</p>-->
+<!--                            <p class="errorText" v-if="!$v.password.password">This board must be mail</p>-->
+<!--                            <input   v-model="password"-->
+<!--                                     :class=" {error: $v.password.$error }">-->
+<!--                        </div>-->
+                    <button @click="reloadPage()" class="btn">
                        Log In
                     </button>
                     </div>
@@ -47,19 +54,26 @@
     data(){
       return{
         name: '',
-        email:''
+        email:'',
+
       }
     },
     validations:{
       name: {
         required,
-        minLength: minLength(6)
+        minLength: minLength(4)
       },
       email:{
          required,
          email
-      }
+      },
+
     },
+    methods:{
+      reloadPage(){
+        window.location.reload()
+      }
+    }
 
 
   }

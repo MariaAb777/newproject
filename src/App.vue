@@ -2,25 +2,13 @@
   <div id="app">
     <div id="nav">
       <router-link to="/Logged">Your Page</router-link> |
-      <router-link to="/Modal">About us</router-link>
+      <router-link to="/AboutUs">About us</router-link>
+
     </div>
 
-    <div class="wrapper">
-      <div class="wrapper_content">
-        <section>
-          <div class="container">
-            <button @click="modalValidate = !modalValidate" class="btn">
-              Click to Log in
-            </button>
-            <ModalValidate v-show="modalValidate" @close="modalValidate=false">
+    <MainModal> </MainModal>
 
-            </ModalValidate>
-          </div>
-        </section>
-      </div>
-    </div>
-    <!-- <router-view/> -->
-
+    <router-view></router-view>
   </div>
 
 
@@ -30,33 +18,19 @@
 <script>
 
 
-import ModalValidate from './views/Modals/ModalValidate'
+
+import MainModal from './views/Modals/MainModal'
 
 export default {
   name: "App",
   components: {
 
-    ModalValidate
+
+    MainModal
   },
   data() {
     return {
-      modalSecond: {
-         show: false,
-        name: '',
-        email: ''
-      },
-      modalValidate : false
-    };
-  },
-  methods:{
-    submitSecondForm(){
-      console.log({
-        name: this.modalSecond.name,
-        email: this.modalSecond.email
-      })
-      this.modalSecond.name = ''
-      this.modalSecond.email =''
-      this.modalSecond.show = false
+
 
     }
   }
@@ -76,7 +50,6 @@ export default {
   padding: 30px;
 
   a {
-    font-weight: bold;
     color: #2c3e50;
 
     &.router-link-exact-active {
@@ -84,6 +57,12 @@ export default {
     }
   }
 }
+  .main-btn{
+    height: 25px;
+    width: 110px;
+    border-radius: 5px;
+    border-color: #999999;
+  }
 
 
 </style>

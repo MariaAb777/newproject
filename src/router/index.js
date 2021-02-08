@@ -1,20 +1,43 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Modal from '../views/Modals/Modal.vue'
-import Logged from '../views/Logged/Logged.vue'
+import AboutUs from '../views/About/AboutUs'
+import Logged from '../views/Logged/Logged'
+import PagePhotos from '../views/Logged/LoggedMenu/PagePhotos'
+import AccountMessages from '../views/Logged/LoggedMenu/AccountMessages'
+import AboutYou from '../views/Logged/LoggedMenu/AboutYou'
 
-Vue.use(VueRouter)
+
+  Vue.use(VueRouter)
 
 const routes = [
+
   {
-    path: '/Modal',
-    name: 'Modal',
-    component: Modal
+    path: '/AboutUs',
+    name: 'AboutUs',
+    component: AboutUs
   },
   {
     path: '/Logged',
     name: 'Logged',
-    component: Logged
+    component: Logged,
+
+  },
+
+        {
+          path: '/PagePhotos',
+          name: 'PagePhotos',
+          component: PagePhotos,
+        },
+        {
+          path: '/AccountMessages',
+          name: 'AccountMessages',
+          component: AccountMessages,
+        },{
+          path: '/AboutYou',
+          name: 'AboutYou',
+          component: AboutYou,
+
+
   },
 
 ]

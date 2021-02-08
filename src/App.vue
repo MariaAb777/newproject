@@ -1,53 +1,65 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/Notte">Note</router-link> |
-      <router-link to="/Modal">Modal</router-link>
+      <router-link to="/Logged">Your Page</router-link> |
+      <router-link to="/Modal">About us</router-link>
     </div>
 
     <div class="wrapper">
       <div class="wrapper_content">
         <section>
           <div class="container">
-            <button @click="modalFirst = !modalFirst" class="btn">
-              Show first modal
+            <button @click="modalValidate = !modalValidate" class="btn">
+              Click to Log in
             </button>
-            <modal
-              title="first modal"
-              v-if="modalFirst"
-              @close="modalFirst = !modalFirst"
-            >
-              <div slot="body">
-                <p>This is text</p>
-                <button @click="modalFirst = !modalFirst" class="btn">
-              Well done
-            </button>
-              </div>
+            <ModalValidate v-show="modalValidate" @close="modalValidate=false">
 
-              
-            </modal>
+            </ModalValidate>
           </div>
         </section>
       </div>
     </div>
     <!-- <router-view/> -->
+
   </div>
+
+
 </template>
 
 
 <script>
-import modal from "./views/Modals/Modal.vue";
+
+
+import ModalValidate from './views/Modals/ModalValidate'
 
 export default {
   name: "App",
   components: {
-    modal,
+
+    ModalValidate
   },
   data() {
     return {
-      modalFirst: false,
+      modalSecond: {
+         show: false,
+        name: '',
+        email: ''
+      },
+      modalValidate : false
     };
   },
+  methods:{
+    submitSecondForm(){
+      console.log({
+        name: this.modalSecond.name,
+        email: this.modalSecond.email
+      })
+      this.modalSecond.name = ''
+      this.modalSecond.email =''
+      this.modalSecond.show = false
+
+    }
+  }
 };
 </script>
 
@@ -72,4 +84,6 @@ export default {
     }
   }
 }
+
+
 </style>

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Modal from '../views/Modals/Modal.vue'
-import Notte from '../views/Notes/Notte.vue'
+import Logged from '../views/Logged/Logged.vue'
 
 Vue.use(VueRouter)
 
@@ -12,9 +12,9 @@ const routes = [
     component: Modal
   },
   {
-    path: '/Notte',
-    name: 'Notte',
-    component: Notte
+    path: '/Logged',
+    name: 'Logged',
+    component: Logged
   },
 
 ]

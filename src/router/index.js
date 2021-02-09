@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import AboutUs from '../views/About/AboutUs'
-import Logged from '../views/Logged/Logged'
-import PagePhotos from '../views/Logged/LoggedMenu/PagePhotos'
-import AccountMessages from '../views/Logged/LoggedMenu/AccountMessages'
-import AboutYou from '../views/Logged/LoggedMenu/AboutYou'
+import Home from '../views/Home'
+import Users from '../views/Users'
+import NotifyPage from '../views/NotifyPage'
+
 
 
   Vue.use(VueRouter)
@@ -12,34 +11,27 @@ import AboutYou from '../views/Logged/LoggedMenu/AboutYou'
 const routes = [
 
   {
-    path: '/AboutUs',
-    name: 'AboutUs',
-    component: AboutUs
+    path: '/Home',
+    name: 'Home',
+    component: Home
   },
   {
-    path: '/Logged',
-    name: 'Logged',
-    component: Logged,
+    path: '/Users',
+    name: 'Users',
+    component: Users,
 
   },
-
-        {
-          path: '/PagePhotos',
-          name: 'PagePhotos',
-          component: PagePhotos,
-        },
-        {
-          path: '/AccountMessages',
-          name: 'AccountMessages',
-          component: AccountMessages,
-        },{
-          path: '/AboutYou',
-          name: 'AboutYou',
-          component: AboutYou,
-
+  {
+    path: '/NotifyPage',
+    name: 'NotifyPage',
+    component: NotifyPage,
 
   },
-
+//
+//
+//
+//
+//
 ]
 
 const router = new VueRouter({

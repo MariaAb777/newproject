@@ -1,14 +1,16 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/Logged">Your Page</router-link> |
-      <router-link to="/AboutUs">About us</router-link>
-
-    </div>
-
-    <MainModal> </MainModal>
-
+  <div id="main-page">
+   <div class="main-header">
+     <p class="logo-text">User CRM</p>
+        <ul class="menu-block">
+          <router-link to="/Home">Home</router-link>
+          <router-link to="/Users">Users</router-link>
+            <router-link to="/NotifyPage">Notify</router-link>
+        </ul>
+   </div>
     <router-view></router-view>
+
+
   </div>
 
 
@@ -19,14 +21,14 @@
 
 
 
-import MainModal from './views/Modals/MainModal'
+
 
 export default {
   name: "App",
   components: {
 
 
-    MainModal
+
   },
   data() {
     return {
@@ -38,30 +40,23 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+.main-header{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 
-#nav {
-  padding: 30px;
 
-  a {
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  .logo-text{
+    font-size: 20px;
+    color: #2a387b;
   }
 }
-  .main-btn{
-    height: 25px;
-    width: 110px;
-    border-radius: 5px;
-    border-color: #999999;
+  .menu-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    width: 300px;
   }
 
 

@@ -6,33 +6,21 @@
           <router-link to="/Home">Home</router-link>
           <router-link to="/Users">Users</router-link>
             <router-link to="/NotifyPage">Notify</router-link>
+            <router-link to="/SearchPage">Search</router-link>
         </ul>
    </div>
     <router-view></router-view>
-
-
   </div>
-
-
 </template>
 
-
 <script>
-
-
-
-
-
 export default {
   name: "App",
   components: {
 
-
-
   },
   data() {
     return {
-
 
     }
   }
@@ -44,11 +32,12 @@ export default {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+    padding: 30px;
 
 
   .logo-text{
     font-size: 20px;
-    color: #2a387b;
+    color: #007bff;
   }
 }
   .menu-block{

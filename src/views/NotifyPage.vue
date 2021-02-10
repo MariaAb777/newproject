@@ -3,28 +3,22 @@
         <section>
             <div class="container">
 
-                <!-- wrapper -->
                 <div class="notify__wrapper">
 
-                    <!-- title -->
                     <div class="notify-title">
                         <p>Notify App</p>
                         <svg @click="getNotifyLazy" version="1.1"  width="20px" height="20px" cursor="pointer" x="0px" y="0px" viewBox="0 0 489.935 489.935" style="enable-background:new 0 0 489.935 489.935;"></svg>
 
                     </div>
 
-                    <!-- notify -->
                     <div class="notify__content">
 
-                        <!-- preloader -->
                         <preloader v-if="loading" :width="90" :height="90"/>
 
-                        <!-- erorr -->
                         <div class="error" v-if="error">
                             <p>{{ error }}</p>
                         </div>
 
-                        <!-- notify -->
                         <notify v-if="!loading && !error" :messages="messages"/>
 
                     </div>

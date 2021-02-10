@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home'
 import Users from '../views/Users'
 import NotifyPage from '../views/NotifyPage'
+import SearchPage from '../components/Search'
 
 
 
@@ -25,6 +26,12 @@ const routes = [
     path: '/NotifyPage',
     name: 'NotifyPage',
     component: NotifyPage,
+
+  },
+  {
+    path: '/SearchPage',
+    name: 'SearchPage',
+    component: SearchPage,
 
   },
 //

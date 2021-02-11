@@ -44,7 +44,7 @@
                            aria-describedby="button-addon2">
                 </div>
                 <div class="button-group">
-                    <button  @click.prevent="register" type="button" class=" btn btn-outline-primary"  >
+                    <button  @click="register" type="button" class=" btn btn-outline-primary"  >
                         Register
                     </button>
                     <button @click="goTo('Login')"  type="button" class="ctm-btn btn btn-outline-primary">Log In</button>

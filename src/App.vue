@@ -7,6 +7,9 @@
           <router-link to="/Users">Users</router-link>
             <router-link to="/NotifyPage">Notify</router-link>
             <router-link to="/SearchPage">Search</router-link>
+            <router-link to="/Login">Login</router-link>
+            <router-link to="/Register">Register</router-link>
+            <router-link to="/UserPage">Your Page</router-link>
         </ul>
    </div>
     <router-view></router-view>
@@ -45,7 +48,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    width: 300px;
+    width: 600px;
   }
 
 

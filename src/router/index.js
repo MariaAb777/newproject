@@ -4,7 +4,9 @@ import Home from '../views/Home'
 import Users from '../views/Users'
 import NotifyPage from '../views/NotifyPage'
 import SearchPage from '../components/Search'
-
+import Login from '../views/Login'
+import Register from '../views/Register'
+import UserPage from '../views/UserPage'
 
 
   Vue.use(VueRouter)
@@ -34,11 +36,25 @@ const routes = [
     component: SearchPage,
 
   },
-//
-//
-//
-//
-//
+  {
+    path: '/Login',
+    name: 'Login',
+    component: Login,
+
+  },
+  {
+    path: '/Register',
+    name: 'Register',
+    component: Register,
+
+  },
+  {
+    path: '/UserPage',
+    name: 'UserPage',
+    component: UserPage,
+
+  },
+
 ]
 
 const router = new VueRouter({
@@ -46,5 +62,6 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
 
 export default router
